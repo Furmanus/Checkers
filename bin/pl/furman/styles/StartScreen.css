@@ -1,0 +1,13 @@
+.root{
+	
+	-fx-background-image: url("./images/checkers.jpg");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center center;
+}
+.button{
+	
+	-fx-background-color: silver, linear-gradient(silver 50%, white 100%);
+	-fx-background-radius: 30;
+	-fx-font-size: 24;
+	-fx-font-family: Monospace;
+}

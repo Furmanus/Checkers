@@ -1,0 +1,51 @@
+.button1{
+	
+	-fx-background-color: bisque;
+	-fx-border-color: black;
+}
+
+.button2{
+	
+	-fx-background-color: darkgoldenrod;
+	-fx-border-color: black;
+}
+
+.selectedButton{
+	
+	-fx-border-color: red;
+	-fx-border-width: 5px;
+}
+
+.highlightedButton{
+	
+	-fx-border-color: blue;
+	-fx-border-width: 5px;
+}
+
+.blackPawn{
+	
+	-fx-background-image: url("./images/pawn_b.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center center;
+}
+
+.whitePawn{
+	
+	-fx-background-image: url("./images/pawn_w.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center center;
+}
+
+.blackQueen{
+	
+	-fx-background-image: url("./images/queen_b.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center center;
+}
+
+.whiteQueen{
+	
+	-fx-background-image: url("./images/queen_w.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center center;
+}
