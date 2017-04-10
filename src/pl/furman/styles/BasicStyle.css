@@ -24,28 +24,28 @@
 
 .blackPawn{
 	
-	-fx-background-image: url("./images/pawn_b.png");
+	-fx-background-image: url("./../../../../images/pawn_b.png");
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: center center;
 }
 
 .whitePawn{
 	
-	-fx-background-image: url("./images/pawn_w.png");
+	-fx-background-image: url("./../../../../images/pawn_w.png");
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: center center;
 }
 
 .blackQueen{
 	
-	-fx-background-image: url("./images/queen_b.png");
+	-fx-background-image: url("./../../../../images/queen_b.png");
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: center center;
 }
 
 .whiteQueen{
 	
-	-fx-background-image: url("./images/queen_w.png");
+	-fx-background-image: url("./../../../../images/queen_w.png");
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: center center;
 }

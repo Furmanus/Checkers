@@ -1,10 +1,7 @@
 package pl.furman.screens;
 
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.SceneAntialiasing;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import pl.furman.game.Game;
 import pl.furman.ui.CheckersButton;

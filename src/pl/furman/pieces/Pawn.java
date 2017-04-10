@@ -122,9 +122,7 @@ public class Pawn implements Piece{
 	public String[] getPossibleMoves(Board board){
 		
 		ArrayList<String> result = new ArrayList<String>();
-		
-		
-		
+			
 		return null;
 	}
 	
@@ -133,6 +131,7 @@ public class Pawn implements Piece{
 		String result = "false";
 		int dx;
 		int dy;
+		int forbiddenX = this.colour == 'w' ? -1 : 1;
 		
 		ArrayList<Piece> hostileList = this.validateVicinity(board);
 		
@@ -142,7 +141,7 @@ public class Pawn implements Piece{
 				
 				for(int j=-1; j<=1; j++){
 					
-					if(i==0 || j==0){
+					if(i==0 || j==0 || i == forbiddenX){
 						
 						continue;
 					}else{

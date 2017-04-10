@@ -1,10 +1,7 @@
 package pl.furman.interfaces;
 
-import java.util.ArrayList;
-
 import pl.furman.game.Board;
 import pl.furman.game.Player;
-import pl.furman.pieces.Pawn;
 
 public interface Piece {
 	

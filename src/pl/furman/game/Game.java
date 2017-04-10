@@ -43,7 +43,6 @@ public class Game {
 	
 	public void nextStep(Player player, String coords){
 		
-		String sourceCoords = "";
 		String examinedCoords = "";
 		boolean killStreak = false;
 		String killMade = "false";
@@ -130,14 +129,6 @@ public class Game {
 		}else{
 			
 			return null;
-		}
-	}
-	//DEBUG
-	private void clearPlayer(Player player){
-		
-		while(player.getPawns().size() > 0){
-			
-			player.getPawns().remove(0);
 		}
 	}
 

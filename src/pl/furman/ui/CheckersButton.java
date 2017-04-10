@@ -1,16 +1,8 @@
 package pl.furman.ui;
 
-import java.awt.Font;
-
-import com.sun.javafx.css.Style;
-
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderStroke;
-import javafx.scene.layout.Pane;
 import pl.furman.game.Game;
 
 public class CheckersButton extends Button {

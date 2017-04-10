@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import javafx.scene.layout.GridPane;
 import pl.furman.interfaces.*;
-import pl.furman.pieces.Pawn;
 import pl.furman.ui.CheckersButton;
 import pl.furman.ui.GUI;
 

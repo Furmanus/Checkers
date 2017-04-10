@@ -4,7 +4,6 @@ import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
 import pl.furman.game.Player;
-import pl.furman.pieces.Pawn;
 
 public interface GUInterface {
 
