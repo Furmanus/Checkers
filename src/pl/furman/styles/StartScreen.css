@@ -1,6 +1,6 @@
 .root{
 	
-	-fx-background-image: url("./images/checkers.jpg");
+	-fx-background-image: url("./../../../../images/checkers.jpg");
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: center center;
 }
