@@ -4,6 +4,11 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import pl.furman.screens.StartScreen;
 
+/**
+ * Main class responsible for graphical interface. Creates main stage and sets its main scene.
+ * @author £ukasz Lach
+ *
+ */
 public class App extends Application {
 	
 	@Override

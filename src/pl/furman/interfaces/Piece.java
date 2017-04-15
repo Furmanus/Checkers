@@ -3,6 +3,11 @@ package pl.furman.interfaces;
 import pl.furman.game.Board;
 import pl.furman.game.Player;
 
+/**
+ * Interface for players checkers figures. Figures actually are interfaces of this type, because both Pawns and Queens have same methods.
+ * @author £ukasz Lach
+ *
+ */
 public interface Piece {
 	
 	String validateMovement(int targetX, int targetY, Board board);

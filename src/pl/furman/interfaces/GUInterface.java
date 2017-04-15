@@ -5,6 +5,11 @@ import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
 import pl.furman.game.Player;
 
+/**
+ * Interface for operating on graphical user interface.
+ * @author £ukasz Lach
+ *
+ */
 public interface GUInterface {
 
 	public void setPawn(int x, int y, Piece piece);

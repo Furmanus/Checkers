@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 import pl.furman.interfaces.Piece;
 
+/**
+ * Class representing one of two players.
+ * @author £ukasz Lach
+ *
+ */
 public class Player {
 
 	private ArrayList<Piece> pawns = new ArrayList<Piece>();

@@ -5,6 +5,11 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import pl.furman.game.Game;
 
+/**
+ * Class representing graphical visualisation of single game board cell.
+ * @author £ukasz Lach
+ *
+ */
 public class CheckersButton extends Button {
 	
 	private CheckersButton instance = this;
@@ -21,6 +26,12 @@ public class CheckersButton extends Button {
 		}
 	};
 
+	/**
+	 * Public constructor. Sets size and style for this button and also sets its {@code id}. {@code id} is a {@code String} "ixj", where "i" is
+	 * board row and j is board column where this button will be placed. Event handler on mouse click will trigger {@code Game} object instance
+	 * method {@code nextStep} with active player and {@code id} of this button as parameters.
+	 * @param id {@code String} "ixj" where "i" is board row and "j" is board column where this button will be placed.
+	 */
 	public CheckersButton(String id){
 		
 		this.setId(id);
@@ -31,6 +42,9 @@ public class CheckersButton extends Button {
 		this.addEventHandler(MouseEvent.MOUSE_CLICKED, this.buttonEventHandler);
 	}
 	
+	/**
+	 * Sets background color for this button, which basically means adding one of two style classes from {@code BasicStyle.css}.
+	 */
 	private void setBackgroundColour(){
 		
 		String id = this.getId();
@@ -46,21 +60,36 @@ public class CheckersButton extends Button {
 		}
 	}
 	
+	/**
+	 * Setter for private {@code game} field.
+	 * @param game {@code Game} class object.
+	 */
 	public void setGame(Game game){
 		
 		this.game = game;
 	}
 	
+	/**
+	 * 
+	 * @return Returns {@code boolean} value of private {@code isActive} field.
+	 */
 	public boolean isActive(){
 		
 		return this.isActive;
 	}
 	
+	/**
+	 * 
+	 * @return Returns {@code boolean} value of private {@code isHighlighted} field.
+	 */
 	public boolean isHighlighted(){
 		
 		return this.isHighlighted;
 	}
 	
+	/**
+	 * Method which changes value of private {@code boolean isActive} field and adds(or removes) style class {@code selectedButton}.
+	 */
 	public void changeActiveState(){
 		
 		if(instance.isActive == false){
@@ -74,6 +103,9 @@ public class CheckersButton extends Button {
 		}
 	}
 	
+	/**
+	 * Method which changes value of private {@code boolean isHighlighted} field and adds(or removes) style class {@code highlightedButton}.
+	 */
 	public void changeHighlightedState(){
 		
 		if(instance.isHighlighted == false){
