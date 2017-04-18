@@ -16,6 +16,7 @@ public class Game {
 	private Player white = new Player("white", 'w');
 	private Player black = new Player("black", 'b');
 	private Player activePlayer = white;
+	private int turnWithoutCapture = 0;
 	
 	/**
 	 * Public constructor. Creates instance on {@code Board} class and sets it on private field, and triggers method responsible for initiating
@@ -134,6 +135,20 @@ public class Game {
 					board.highlightPawnsToMove(this.activePlayer);
 				}
 			}
+			
+			if(killMade == "kill"){
+				
+				turnWithoutCapture = 0;
+			}else{
+				
+				if(examinedPawn.getName() == "Queen"){
+					
+					turnWithoutCapture++;
+				}else{
+					
+					turnWithoutCapture = 0;
+				}
+			}
 		}
 		
 		Player winner = validateVictory();
@@ -141,11 +156,19 @@ public class Game {
 		if(winner != null){
 			
 			board.getGui().setVictoryScreen(winner);
+			board.getGui().deactivateButtons();
 		}
 		
 		if(board.canPlayerMove(opponent) == false){
 			
 			board.getGui().setVictoryScreen(opponent.getName() == "white" ? black : white);
+			board.getGui().deactivateButtons();
+		}
+		
+		if(turnWithoutCapture > 40){
+			
+			board.getGui().setVictoryScreen(null);
+			board.getGui().deactivateButtons();
 		}
 	}
 	

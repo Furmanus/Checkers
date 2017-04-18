@@ -2,9 +2,11 @@ package pl.furman.ui;
 
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import pl.furman.game.Game;
 import pl.furman.game.Player;
 import pl.furman.interfaces.GUInterface;
@@ -85,9 +87,19 @@ public class GUI implements GUInterface {
 	 */
 	public void setVictoryScreen(Player player) {
 		
-		Text text = new Text("Player " + player.getName() + " won the game!");
-		text.setFont(new Font(64));
-		grid.add(text, 0, 0, 8, 8);
+		if(player != null){
+			
+			Text text = new Text("Player " + player.getName() + " won the game!");
+			text.setTextAlignment(TextAlignment.CENTER);
+			text.setFont(new Font(64));
+			grid.add(text, 0, 0, 8, 8);
+		}else{
+			
+			Text text = new Text("Draw");
+			text.setTextAlignment(TextAlignment.CENTER);
+			text.setFont(new Font(64));
+			grid.add(text, 0, 0, 8, 8);
+		}
 	}
 	
 	/**
@@ -129,6 +141,23 @@ public class GUI implements GUInterface {
 					
 					examinedButton.changeHighlightedState();
 				}
+			}
+		}
+	}
+	
+	/**
+	 * Removes event listeners from all buttons on board.
+	 */
+	public void deactivateButtons(){
+		
+		CheckersButton examinedButton;
+		
+		for(int i=0; i<8; i++){
+			
+			for(int j=0; j<8; j++){
+				
+				examinedButton = ((CheckersButton)grid.lookup("#" + i + "x" + j));
+				examinedButton.removeEventHandler();
 			}
 		}
 	}

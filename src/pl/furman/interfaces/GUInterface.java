@@ -25,4 +25,6 @@ public interface GUInterface {
 	public void clearButtons();
 	
 	public GridPane getGrid();
+	
+	public void deactivateButtons();
 }

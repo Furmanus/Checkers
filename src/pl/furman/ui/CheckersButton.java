@@ -118,4 +118,12 @@ public class CheckersButton extends Button {
 			this.isHighlighted = false;
 		}
 	}
+
+	/**
+	 * Removes event handler from {@code this} {@code CheckersButton}.
+	 */
+	public void removeEventHandler() {
+		
+		this.removeEventHandler(MouseEvent.MOUSE_CLICKED, this.buttonEventHandler);
+	}
 }
