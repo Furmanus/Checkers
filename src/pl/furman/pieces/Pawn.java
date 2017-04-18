@@ -147,7 +147,7 @@ public class Pawn implements Piece{
 	
 	/**
 	 * TODO
-	 * @param board
+	 * @param board {@code Board} game object which contains all figures in game.
 	 * @return
 	 */
 	public String[] getPossibleMoves(Board board){
@@ -159,7 +159,7 @@ public class Pawn implements Piece{
 	/**
 	 * Method determining if {@code Pawn} object can move anywhere from its current position.
 	 * @param board {@code Board} game object which contains all figures in game.
-	 * @return Returns {@code String}: "false" if Pawn can't move to choosen coordinates, "true" if Pawn can move to choosen coordinates and "kill" if
+	 * @return Returns {@code String}: "false" if Pawn can't move to any coordinates, "true" if Pawn can move to any coordinates and "kill" if
 	 * Pawn can move to choosen coordinates and enemy figure will be captured in that move.
 	 */
 	public String canMove(Board board){

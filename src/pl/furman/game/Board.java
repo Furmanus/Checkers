@@ -174,6 +174,26 @@ public class Board {
 	}
 	
 	/**
+	 * Method which validates whether at least one figure of certain {@code Player} can perform move this turn.
+	 * @param player {@code Player} object we want to examine
+	 * @return Returns {@code true} if at least one figure of {@code Player} object can move, returns {@code false} otherwise.
+	 */
+	public boolean canPlayerMove(Player player){
+		
+		boolean canMove = false;
+		
+		for(int i=0; i<player.getPawns().size(); i++){
+			
+			if(player.getPawns().get(i).canMove(this) != "false"){
+				
+				canMove = true;
+			}
+		}
+		
+		return canMove;
+	}
+	
+	/**
 	 * Getter for private {@code GUInterface} field.
 	 * @return Returns {@code GUInterface} object.
 	 */

@@ -250,7 +250,7 @@ public class Queen implements Piece {
 	/**
 	 * Method which checks if this queen can move this turn(at any direction with any result).
 	 * @param board {@code Board} game object which contains all figures in game.
-	 * @return Returns String: "false" if this queen can't move to choosen coordinates, "true" if this queen can move to choosen coordinates and "kill" if
+	 * @return Returns String: "false" if this queen can't move to any coordinates, "true" if this queen can move to any coordinates and "kill" if
 	 * this queen can move to choosen coordinates and enemy figure would be captured in that move (enemy's figure {@code killPawn}.
 	 */
 	public String canMove(Board board) {

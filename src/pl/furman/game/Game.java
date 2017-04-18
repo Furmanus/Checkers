@@ -74,6 +74,7 @@ public class Game {
 		int targetX;
 		int targetY;
 		Piece examinedPawn;
+		Player opponent = activePlayer.getName() == "white" ? black : white;
 		
 		if(player.getSourceCoords() == null){
 			
@@ -140,6 +141,11 @@ public class Game {
 		if(winner != null){
 			
 			board.getGui().setVictoryScreen(winner);
+		}
+		
+		if(board.canPlayerMove(opponent) == false){
+			
+			board.getGui().setVictoryScreen(opponent.getName() == "white" ? black : white);
 		}
 	}
 	
