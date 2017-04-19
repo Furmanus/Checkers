@@ -3,6 +3,7 @@ package pl.furman.game;
 import javafx.scene.layout.GridPane;
 import pl.furman.interfaces.Piece;
 import pl.furman.pieces.Pawn;
+import pl.furman.pieces.Queen;
 
 /**
  * Main class responsible for application logic. Contains three important private fields: instance of {@code Board} class which represents game board,

@@ -1,5 +1,7 @@
 package pl.furman.pieces;
 
+import java.util.ArrayList;
+
 import pl.furman.game.Board;
 import pl.furman.game.Player;
 import pl.furman.interfaces.Piece;
@@ -48,6 +50,7 @@ public class Queen implements Piece {
 		
 		int dx = 0;
 		int dy = 0;
+		ArrayList<int[]> directions = new ArrayList<int[]>();
 		
 		if(Math.abs(targetX - this.x) - Math.abs(targetY - this.y) != 0){
 			
@@ -55,7 +58,7 @@ public class Queen implements Piece {
 		}else{
 			
 			String validateDirection = null;
-			exit:
+			
 			for(int i=-1; i<=1; i++){
 				
 				for(int j=-1; j<=1; j++){
@@ -69,13 +72,15 @@ public class Queen implements Piece {
 						
 						if(validateDirection == "kill"){
 							
-							dx = i;
-							dy = j;
-							
-							break exit;
+							directions.add(new int[]{i,j});
 						}
 					}
 				}
+			}
+			
+			if(directions.size() > 0){
+				
+				validateDirection = "kill";
 			}
 			
 			if(validateDirection != "kill"){
@@ -91,7 +96,19 @@ public class Queen implements Piece {
 			
 			if(validateDirection == "kill"){
 				
-				return checkDirection(this.x, this.y, dx, dy, targetX, targetY, board, true);
+				String result = null;
+				
+				for(int i=0; i<directions.size(); i++){
+					
+					result = checkDirection(this.x, this.y, directions.get(i)[0], directions.get(i)[1], targetX, targetY, board, true);
+					
+					if(result == "kill"){
+						
+						break;
+					}
+				}
+				
+				return result;
 			}else{
 				
 				return checkDirection(this.x, this.y, dx, dy, targetX, targetY, board, false);
